@@ -20,7 +20,6 @@ async function selectMediaStream() {
 }
 
 buttonSelectArea.addEventListener('click', () => {
-	/* On Load */
 	selectMediaStream().then(() => {
 		if (shared) {
 			/* esconde o btn SelectArea e exibe o btn Show   */
@@ -31,12 +30,9 @@ buttonSelectArea.addEventListener('click', () => {
 });
 
 buttonShow.addEventListener('click', async () => {
-	/* desabitita o btn */
 	buttonShow.disabled = true;
 
-	/* inicia o picture in picture */
 	await videoElement.requestPictureInPicture();
 
-	/* reabilita o btn show */
 	buttonShow.disabled = false;
 });
