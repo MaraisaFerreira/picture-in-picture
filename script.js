@@ -22,7 +22,6 @@ async function selectMediaStream() {
 buttonSelectArea.addEventListener('click', () => {
 	selectMediaStream().then(() => {
 		if (shared) {
-			/* esconde o btn SelectArea e exibe o btn Show   */
 			buttonSelectArea.hidden = true;
 			buttonShow.hidden = false;
 		}
